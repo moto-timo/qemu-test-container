@@ -18,7 +18,11 @@ install:
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
   - runqemu-extract-sdk core-image-minimal-dev-qemux86.tar.gz $HOME/qemux86-2.2 
 
+env:
+  global:
+    - KERNEL="$HOME/bzImage-qemux86.bin"
+
 script:
   - sudo service portmap restart
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
-  - KERNEL=$HOME/bzImage-qemux86.bin runqemu nographic qemux86 $HOME/qemux86-2.2
+  - runqemu nographic qemux86 $HOME/qemux86-2.2
