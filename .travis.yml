@@ -8,6 +8,7 @@ before_install:
 
 install:
   - mkdir -p $HOME/poky/2.2
+  - chmod +x poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh
   - ./poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh -d $HOME/poky/2.2
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
   - runqemu-extract-sdk core-image-minimal-dev-qemux86.tar.gz $HOME/qemux86-2.2 
