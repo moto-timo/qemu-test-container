@@ -1,6 +1,11 @@
 # We need sudo for TUN/TAP
 sudo: required
 
+addons:
+  apt:
+    packages:
+      - rpcbind
+
 before_install:
   - wget https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/bzImage-qemux86.bin
   - wget https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/core-image-minimal-dev-qemux86.tar.gz
@@ -14,5 +19,6 @@ install:
   - runqemu-extract-sdk core-image-minimal-dev-qemux86.tar.gz $HOME/qemux86-2.2 
 
 script:
+  - sudo service portmap restart
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
   - runqemu nographic qemux86 $HOME/qemux86-2.2
