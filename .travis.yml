@@ -2,9 +2,9 @@
 sudo: required
 
 before_install:
-  - wget -O https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/bzImage-qemux86.bin
-  - wget -O https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/core-image-minimal-dev-qemux86.tar.gz
-  - wget -O https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/toolchain/x86_64/poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh
+  - wget https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/bzImage-qemux86.bin
+  - wget https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/machines/qemu/qemux86/core-image-minimal-dev-qemux86.tar.gz
+  - wget https://autobuilder.yoctoproject.org/pub/releases/yocto-2.2.rc4/toolchain/x86_64/poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh
 
 install:
   - sh poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh -d $HOME/poky/2.2
