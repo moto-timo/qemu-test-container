@@ -21,4 +21,4 @@ install:
 script:
   - sudo service portmap restart
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
-  - runqemu nographic $HOME/bzImage-qemux86.bin $HOME/qemux86-2.2
+  - runqemu qemux86 $HOME/bzImage-qemux86.bin $HOME/qemux86-2.2 nographic
