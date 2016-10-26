@@ -16,7 +16,7 @@ install:
   - chmod +x poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh
   - ./poky-glibc-x86_64-core-image-sato-i586-toolchain-2.2.sh -y -d $HOME/poky/2.2
   - source $HOME/poky/2.2/environment-setup-i586-poky-linux
-  - runqemu-extract-sdk core-image-sato-sdk-qemux86.tar.gz $HOME/qemux86-2.2 
+  - runqemu-extract-sdk core-image-sato-sdk-qemux86.tar.bz2 $HOME/qemux86-2.2 
 
 after_install:
   - sudo service portmap restart
