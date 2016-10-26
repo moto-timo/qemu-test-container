@@ -25,4 +25,4 @@ script:
   - env
   - which runqemu
   - which python3
-  - runqemu bzImage-qemux86.bin $HOME/qemux86-2.2 nographic &
+  - runqemu bzImage-qemux86.bin $HOME/qemux86-2.2 nographic kvm
